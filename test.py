@@ -18,7 +18,7 @@ class CustomButton(Button):
         super().__init__(**kwargs)
         self.font_size = 14
         self.font_name = 'TimesNewRoman'
-        self.background_normal = ''  # Убрать стандартный фон кнопки
+        self.background_normal = ''  # Убрать фон
         self.background_color = (1, 0.647, 0, 1)  # Оранжевый цвет
         self.size_hint = (None, None)
 class MenuScreen(Screen):
@@ -82,7 +82,7 @@ class CalcScreen(Screen):
         self.manager.current = 'newton_calc'
 
     def dummy(self, instance):
-        # Заглушка для кнопок, пока что не выполняющих никаких действий
+        # Заглушка для кнопок
         pass
 
     def return_to_menu(self, instance):
@@ -136,7 +136,7 @@ class NewtonCalcScreen(Screen):
         self.add_widget(Image(source='background.webp', allow_stretch=True, keep_ratio=False))
         self.layout = FloatLayout()
         self.current_calculation_type = None
-        self.popups = []  # Список для хранения открытых всплывающих окон
+        self.popups = []  # Список
 
         options = ["Рассчитать силу", "Рассчитать массу", "Рассчитать ускорение"]
         for i, option in enumerate(options):
